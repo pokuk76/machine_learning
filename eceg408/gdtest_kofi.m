@@ -28,7 +28,7 @@ for n=1:150
     % compute the w-gradient
     dw = zeros(size(w));
     for m=1:size(w,1)
-        dw(m)=aa(m)/sqrt(sum(w)) - (w(m)*(aa.'*w))/((aa.'*w).^(3/2));
+        dw(m)=aa(m)/sqrt(sum(w)) - (w(m)*(aa.'*w))/((w.'*w).^(3/2));
     end
     % edit here and return in dw the current gradient vecor of w
 
